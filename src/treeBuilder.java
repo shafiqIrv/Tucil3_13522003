@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class treeBuilder {
@@ -113,16 +111,5 @@ public class treeBuilder {
 
     public static void main(String[] args) {
         buildTree();
-        // long startTime = System.currentTimeMillis();
-
-        // ArrayList<String> words = getSimilar("aili");
-        // System.out.println(words.size());
-        // for (String word : words) {
-        // System.out.println(word);
-        // }
-
-        // long endTime = System.currentTimeMillis();
-        // long elapsedTime = endTime - startTime;
-        // System.out.println("Program execution time: " + elapsedTime + "mili second");
     }
 }

@@ -128,13 +128,11 @@ public class Controller implements Initializable {
 
         label_time.setText("Time Elapsed:  " + timeElapsed + " ms");
         label_visited.setText("Visited Nodes: " + visitednodes);
-        // Convert the array to an ObservableList
-        ObservableList<String> items = FXCollections.observableArrayList(answers);
 
-        // Bind the ObservableList to the ListView for display
+        ObservableList<String> items = FXCollections.observableArrayList(answers);
         listView.setItems(items);
 
-        // Set custom cell factory to color the first and last item
+        // Render List
         listView.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {
             @Override
             public ListCell<String> call(ListView<String> param) {
@@ -152,7 +150,7 @@ public class Controller implements Initializable {
                                         new BackgroundFill(Color.rgb(245, 188, 188), CornerRadii.EMPTY, Insets.EMPTY))); // Red
                             } else {
                                 setBackground(new Background(
-                                        new BackgroundFill(Color.rgb(182, 207, 229), CornerRadii.EMPTY, Insets.EMPTY))); // White
+                                        new BackgroundFill(Color.rgb(182, 207, 229), CornerRadii.EMPTY, Insets.EMPTY))); // Blue
                             }
                         } else {
                             setText(null);

@@ -3,23 +3,20 @@ import java.util.*;
 
 public class wordsSorter {
     public static void main(String[] args) {
-        // Input and output file paths
+
         String inputFile = "./test/words.txt";
         String outputFile = "sorted_words.txt";
 
-        // Read words from input file
         List<String> words = readWordsFromFile4(inputFile);
 
-        // Sort words by length
         Collections.sort(words, Comparator.comparingInt(String::length));
 
-        // Write sorted words to output file
         writeWordsToFile(words, outputFile);
 
         System.out.println("Words sorted by length and written to " + outputFile);
     }
 
-    // Method to read words from file
+    // read words from file
     private static List<String> readWordsFromFile(String filename) {
         List<String> words = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
@@ -33,7 +30,6 @@ public class wordsSorter {
         return words;
     }
 
-    // Method to read words from file
     private static List<String> readWordsFromFile4(String filename) {
         List<String> words = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
@@ -49,7 +45,6 @@ public class wordsSorter {
         return words;
     }
 
-    // Method to write words to file
     private static void writeWordsToFile(List<String> words, String filename) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             for (String word : words) {

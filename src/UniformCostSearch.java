@@ -44,21 +44,21 @@ public class UniformCostSearch extends WordLadder {
         return path;
     }
 
-    public static void main(String[] args) {
-        // System.out.println(wordMap);
-        long startTime = System.currentTimeMillis();
-        List<String> path = ucs("atlases", "cabaret");
-        long endTime = System.currentTimeMillis();
+    // public static void main(String[] args) {
+    // // System.out.println(wordMap);
+    // long startTime = System.currentTimeMillis();
+    // List<String> path = ucs("atlases", "cabaret");
+    // long endTime = System.currentTimeMillis();
 
-        if (path != null) {
-            for (String node : path) {
-                System.out.println(node);
-            }
-        } else {
-            System.out.println("Path not found.");
-        }
+    // if (path != null) {
+    // for (String node : path) {
+    // System.out.println(node);
+    // }
+    // } else {
+    // System.out.println("Path not found.");
+    // }
 
-        System.out.println("Execution time: " + (endTime - startTime) + " ms");
-    }
+    // System.out.println("Execution time: " + (endTime - startTime) + " ms");
+    // }
 
 }

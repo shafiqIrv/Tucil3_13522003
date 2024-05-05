@@ -28,33 +28,13 @@
             -fx-background-color: rgb(193, 219, 238);
         </style>
       </TextField>
-      <ImageView fitHeight="62.0" fitWidth="296.0" layoutX="153.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="public\logo.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="230.0" layoutX="454.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.75">
-         <image>
-            <Image url="@../../../../../../../../Downloads/Ellipse%201.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../Downloads/Ellipse%202.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="321.0" fitWidth="231.0" layoutX="461.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.7790374755859375">
-         <image>
-            <Image url="@../../../../../../../../Downloads/Ellipse%203%20(1).png" />
-         </image>
-      </ImageView>
       <Label fx:id="label_start_word" layoutX="153.0" layoutY="196.0" text="Start Word" AnchorPane.leftAnchor="153.0">
         <style>
             -fx-text-fill: rgb(79, 113, 138);
         </style>
       </Label>
 
-      <Label fx:id="label_end_word" layoutX="317.0" layoutY="196.0" text="End Word" AnchorPane.rightAnchor="230.0" >
+      <Label fx:id="label_end_word" layoutX="317.0" layoutY="196.0" text="End Word" AnchorPane.rightAnchor="230.0">
         <style>
             -fx-text-fill: rgb(79, 113, 138);
         </style>
@@ -65,8 +45,29 @@
                 -fx-background-color: rgb(14, 21, 29); /* Set background color */
             </style>
       </ListView>
-      <ChoiceBox fx:id="cb_mode" layoutX="313.0" layoutY="252.0" prefHeight="35.0" prefWidth="149.0" />
+      <ChoiceBox fx:id="cb_mode" layoutX="313.0" layoutY="252.0" prefHeight="35.0" prefWidth="149.0" AnchorPane.rightAnchor="138.0" />
       <Label fx:id="label_time" layoutX="148.0" layoutY="301.0" prefHeight="17.0" prefWidth="144.0" textFill="WHITE" />
       <Label fx:id="label_visited" layoutX="148.0" layoutY="318.0" prefHeight="17.0" prefWidth="144.0" textFill="WHITE" />
+      <ImageView fx:id="img_logo" fitHeight="83.0" fitWidth="346.0" layoutX="133.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="335.0" fitWidth="172.0" layoutX="428.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.2051239013671875">
+         <image>
+            <Image url="@public/Ellipse%203.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fitHeight="150.0" fitWidth="230.0" layoutX="454.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.75">
+         <image>
+            <Image url="@public/Ellipse%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/Ellipse%202.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
