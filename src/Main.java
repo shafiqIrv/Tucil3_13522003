@@ -2,15 +2,13 @@ import java.util.Scanner;
 import java.util.List; // Import the List class from java.util
 import java.util.ArrayList; // Import the ArrayList class from java.util
 
-
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         while (true) {
-            Scanner scanner = new Scanner(System.in);
 
             System.out.println("Masukkan Kata Awal:");
             String start = (scanner.nextLine()).toLowerCase();
-            
 
             while (!WordLadder.isStringValid(start)) {
                 System.out.println("Kata Awal yang dimasukkan tidak valid, Silahkan masukkan lagi: ");
@@ -29,14 +27,14 @@ public class Main {
                 continue;
             }
 
-            System.out.println("Pilih mode pencarian: " );
-            System.out.println("- Greedy Best First Search (1)" );
-            System.out.println("- Uniform Cost Search (2)" );
-            System.out.println("- A-Star Search (3)" );
+            System.out.println("Pilih mode pencarian: ");
+            System.out.println("- Greedy Best First Search (1)");
+            System.out.println("- Uniform Cost Search (2)");
+            System.out.println("- A-Star Search (3)");
 
-            System.out.print("Ketik 1/2/3 : " );
+            System.out.print("Ketik 1/2/3 : ");
             String mode = (scanner.nextLine()).toLowerCase();
-            while (!(mode != "1" || mode != "2"|| mode != "3")) {
+            while (!(mode != "1" || mode != "2" || mode != "3")) {
                 System.out.println("Masukkan mode yang valid: ");
                 mode = scanner.nextLine();
             }
@@ -66,7 +64,7 @@ public class Main {
             System.out.println("Execution time: " + executionTime + " ms");
             System.out.println("==========================================");
 
-            for(String item : result){
+            for (String item : result) {
                 System.out.println(item);
             }
 
@@ -74,21 +72,14 @@ public class Main {
             System.out.print("Main Lagi? (y/n): ");
             String answer = (scanner.nextLine()).toLowerCase();
 
-
-            scanner.close();
-
-            if (answer == "y") {
-                continue;
-            }
-            
-            else {
+            if (answer.equals("n")) {
                 System.out.println("=====================");
                 System.out.println("=     GAME OVER     =");
                 System.out.println("=====================");
+                scanner.close();
                 return;
             }
+
         }
     }
-    
 }
-
