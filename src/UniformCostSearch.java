@@ -2,6 +2,7 @@ import java.util.*;
 
 public class UniformCostSearch extends WordLadder {
     public static List<String> ucs(String start, String end) {
+        // Jarak dari root sampai current, akan diambil yang paling kecil pada tiap
         Map<String, Integer> costSoFar = new HashMap<>();
         Map<String, String> cameFrom = new HashMap<>();
         PriorityQueue<String> queue = new PriorityQueue<>(Comparator.comparingInt(costSoFar::get));
@@ -9,17 +10,17 @@ public class UniformCostSearch extends WordLadder {
         costSoFar.put(start, 0);
         Integer count = 0;
 
+        // Iterasi sampai queue kosong/ketemu
         while (!queue.isEmpty()) {
             count++;
-            // System.out.println(costSoFar + "\n");
             String current = queue.poll();
-
+            // Kondisi Ketemu
             if (current.equals(end)) {
                 List<String> path = reconstructPath(cameFrom, current);
                 path.addFirst(count.toString());
                 return path;
             }
-
+            // Kondisi lanjut
             for (String next : wordMap.getOrDefault(current, Collections.emptyList())) {
                 int newCost = costSoFar.get(current) + 1;
                 if (!costSoFar.containsKey(next) || newCost < costSoFar.get(next)) {
@@ -29,6 +30,7 @@ public class UniformCostSearch extends WordLadder {
                 }
             }
         }
+        // Kondisi ga ketemu sama sekali
         List<String> path = new ArrayList<>();
         path.add(count.toString());
         return path; // Path not found
@@ -43,22 +45,5 @@ public class UniformCostSearch extends WordLadder {
         Collections.reverse(path);
         return path;
     }
-
-    // public static void main(String[] args) {
-    // // System.out.println(wordMap);
-    // long startTime = System.currentTimeMillis();
-    // List<String> path = ucs("atlases", "cabaret");
-    // long endTime = System.currentTimeMillis();
-
-    // if (path != null) {
-    // for (String node : path) {
-    // System.out.println(node);
-    // }
-    // } else {
-    // System.out.println("Path not found.");
-    // }
-
-    // System.out.println("Execution time: " + (endTime - startTime) + " ms");
-    // }
 
 }

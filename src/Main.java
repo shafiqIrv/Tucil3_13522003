@@ -1,6 +1,6 @@
 import java.util.Scanner;
-import java.util.List; // Import the List class from java.util
-import java.util.ArrayList; // Import the ArrayList class from java.util
+import java.util.List; 
+import java.util.ArrayList; 
 
 public class Main {
     public static void main(String[] args) {

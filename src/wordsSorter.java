@@ -16,7 +16,6 @@ public class wordsSorter {
         System.out.println("Words sorted by length and written to " + outputFile);
     }
 
-    // read words from file
     private static List<String> readWordsFromFile(String filename) {
         List<String> words = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {

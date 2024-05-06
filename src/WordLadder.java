@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.util.*;
 
 public class WordLadder {
+    // Membaca file tree.txt dan membuat map dari string ke list of string
     protected static Map<String, List<String>> wordMap = createWordMap("test/tree.txt");
 
     private static Map<String, List<String>> createWordMap(String filename) {
@@ -24,12 +25,9 @@ public class WordLadder {
         return result;
     }
 
+    // Mengecek apakah string valid (tidaka ada kareakter selain huruf)
     public static Boolean isStringValid(String word) {
         return wordMap.containsKey(word);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isStringValid("   "));
     }
 
 }

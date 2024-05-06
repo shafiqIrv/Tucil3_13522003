@@ -7,17 +7,14 @@ import javafx.stage.Stage;
 public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Load the FXML file
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("mainpage.fxml"));
         Parent root = loader.load();
 
-        // Retrieve the controller instance from the FXMLLoader
         Controller controller = loader.getController();
 
-        // Set up the primary stage
-        // controller.setMainWindow(primaryStage);
         primaryStage.setTitle("Word Ladder");
-        primaryStage.setScene(new Scene(root, 600, 600)); // Adjust the scene size as needed
+        primaryStage.setScene(new Scene(root, 600, 600));
         primaryStage.show();
     }
 
