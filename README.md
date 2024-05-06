@@ -9,7 +9,7 @@ Word ladder (also known as Doublets, word-links, change-the-word puzzles, paragr
 
 ## Technologies Used
 - Java 22.0.1
-- Openjdk 21.0.2
+- Openjdk 22.0.2
 - JavaFX 22.0.1
 
 ## Features
@@ -20,31 +20,21 @@ List the ready features here:
 - CLI options
 
 ## Setup
-First, you need to install vscode with java and code runner extension 
+
 
 ### CLI
 - Clone this git repository
-- Open the `Main.java` file in vscode, and run it using vscode, that's it !
+- Make sure your current working directory is in this repository root
+- Change the directory to `bin` folder by typing `cd bin`
+- Simply type `java -cp Tucil3_13522003.jar com.irvansyah.tucil_13522003.Main`
+  
   
 ### GUI
 - Clone this git repository
-- Open the root directory in vscode
-- Install and extract javaFX (recommended to put it in `C:\Program Files\Java`) : [Click Here!](https://gluonhq.com/products/javafx/)
-- Copy your javaFX lib path
-<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/75b79c13-71b9-4fe0-b10a-463672234fd7" height="200">
+- Make sure your current working directory is in this repository root
+- Change the directory to `bin` folder by typing `cd bin`
+- Simply type `java -cp Tucil3_13522003.jar com.irvansyah.tucil_13522003.Launcher`
   
-- Add this code to your run configurations in vscode : `"vmArgs": "--module-path "Your JavaFX lib path" --add-modules javafx.controls,javafx.fxml"`
-<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/5e398a2f-7b56-4e91-9275-58a7f8b5a463" height="200">
-
-- Add the JavaFX lib path to "Referenced Libraries" in vscode
-<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/29aa545d-89be-4808-8cd4-d5570cca3f2b" height="200">
-
-- Open the App.java file in `src/App.java`
-- Click the run button in vscode
-<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/819e27a4-aa97-4695-bc9a-0bc36d532aa9" height="200">
-  
-
-If still confused please watch this video [JavaFX Setup in VSCode](https://www.youtube.com/watch?v=AubJaosfI-0) or contact me 
 
 ## Usage
 ### GUI
@@ -55,15 +45,7 @@ If still confused please watch this video [JavaFX Setup in VSCode](https://www.y
 
 
 
-1. Input start word
-2. Input end word
-3. Input algorithm mode (UCS / GBFS / A\*)
-4. Finished
-
-
-
-
-## Members/Author
+## Author
 13522003	Shafiq Irvansyah
 
 <!-- Optional -->
