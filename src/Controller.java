@@ -51,12 +51,32 @@ public class Controller implements Initializable {
     private Label label_visited;
 
     @FXML
+    private Label label_size;
+
+    @FXML
+    private Label label_memory;
+
+    private static long getMemoryUsage() {
+        Runtime runtime = Runtime.getRuntime();
+        long totalMemory = runtime.totalMemory();
+        long freeMemory = runtime.freeMemory();
+        return totalMemory - freeMemory;
+    }
+
+    @FXML
     void generateAnswers(ActionEvent event) {
         String start = (tf_start_word.getText()).toLowerCase();
         String end = (tf_end_word.getText()).toLowerCase();
         label_time.setText("");
         label_visited.setText("");
         listView.getItems().clear();
+
+        label_end_word.setText("End Word");
+        label_end_word.setTextFill(Color.rgb(79, 113, 138));
+        label_start_word.setText("Start Word");
+        label_start_word.setTextFill(Color.rgb(79, 113, 138));
+        label_memory.setText("");
+        label_size.setText("");
 
         // Kondisi String Kosong
         if (start.length() == 0 || end.length() == 0) {
@@ -90,7 +110,7 @@ public class Controller implements Initializable {
             }
             if (!WordLadder.isStringValid(end)) {
                 label_end_word.setText("Not Found");
-                label_end_word.setTextFill(Color.rgb(168, 236, 183));
+                label_end_word.setTextFill(Color.rgb(255, 169, 169));
             }
 
             return;
@@ -110,8 +130,10 @@ public class Controller implements Initializable {
         label_start_word.setTextFill(Color.rgb(79, 113, 138));
 
         // Kondisi Valid Semua
-        long startTime = System.currentTimeMillis();
         List<String> answers = new ArrayList<>();
+
+        long startTime = System.currentTimeMillis();
+        long initialMemory = getMemoryUsage();
 
         if (currentMode.equals("A-Star")) {
             answers = AStar.astar(start, end);
@@ -121,13 +143,20 @@ public class Controller implements Initializable {
             answers = UniformCostSearch.ucs(start, end);
         }
 
+        long finalMemory = getMemoryUsage();
         long endTime = System.currentTimeMillis();
+
+        long memoryUsage = finalMemory - initialMemory;
         long timeElapsed = endTime - startTime;
+
         String visitednodes = answers.get(0);
         answers.removeFirst();
 
-        label_time.setText("Time Elapsed:  " + timeElapsed + " ms");
-        label_visited.setText("Visited Nodes: " + visitednodes);
+        label_memory.setText("Memory Usage : " + memoryUsage + " bytes");
+        label_size.setText("Path Size    : " + answers.size());
+
+        label_time.setText("Time Elapsed  : " + timeElapsed + " ms");
+        label_visited.setText("Visited Nodes : " + visitednodes);
 
         ObservableList<String> items = FXCollections.observableArrayList(answers);
         listView.setItems(items);

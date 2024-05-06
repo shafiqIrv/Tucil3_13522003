@@ -11,7 +11,6 @@ public class BestFirstSearch extends WordLadder {
             }
         }
         return count;
-
     }
 
     public static List<String> bfs(String start, String end) {

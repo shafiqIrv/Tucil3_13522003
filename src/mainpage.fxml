@@ -11,6 +11,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="600.0" style="-fx-background-color: rgb(14, 21, 29);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
+
+            <ImageView fitHeight="150.0" fitWidth="230.0" layoutX="454.66666666666674" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.0833333333332575">
+         <image>
+            <Image url="@public/Ellipse%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="304.0" fitWidth="137.0" layoutX="464.33333333333326" layoutY="320.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="-1.3333333333332575">
+         <image>
+            <Image url="@public/Ellipse%203.png" />
+         </image>
+      </ImageView>
    <Button fx:id="btn_generate" layoutX="148.0" layoutY="252.0" mnemonicParsing="false" onAction="#generateAnswers" onDragEntered="#generateAnswers" prefHeight="35.0" prefWidth="149.0" text="Generate Answers !" textFill="WHITE">
         <style>
             -fx-background-color: linear-gradient(to bottom right, rgb(76, 244, 255), rgb(60, 45, 221));
@@ -53,21 +64,12 @@
             <Image url="@public/logo.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="335.0" fitWidth="172.0" layoutX="428.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.2051239013671875">
-         <image>
-            <Image url="@public/Ellipse%203.png" />
-         </image>
-      </ImageView>
-
-      <ImageView fitHeight="150.0" fitWidth="230.0" layoutX="454.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.75">
-         <image>
-            <Image url="@public/Ellipse%201.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@public/Ellipse%202.png" />
          </image>
       </ImageView>
+      <Label fx:id="label_memory" layoutX="311.0" layoutY="301.0" prefHeight="17.0" prefWidth="239.0" textFill="WHITE" AnchorPane.rightAnchor="50.0" />
+      <Label fx:id="label_size" layoutX="311.0" layoutY="318.0" prefHeight="17.0" prefWidth="201.0" textFill="WHITE" AnchorPane.rightAnchor="88.0" />
    </children>
 </AnchorPane>
