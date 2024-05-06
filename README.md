@@ -58,8 +58,8 @@ If still confused please watch this video [JavaFX Setup in VSCode](https://www.y
 1. Input start word
 2. Input end word
 3. Input algorithm mode (UCS / GBFS / A\*)
-4. Wait for result
-5. Enjoy!
+4. Finished
+
 
 
 
