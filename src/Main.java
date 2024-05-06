@@ -1,8 +1,15 @@
 import java.util.Scanner;
-import java.util.List; 
-import java.util.ArrayList; 
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
+    private static long getMemoryUsage() {
+        Runtime runtime = Runtime.getRuntime();
+        long totalMemory = runtime.totalMemory();
+        long freeMemory = runtime.freeMemory();
+        return totalMemory - freeMemory;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -42,6 +49,7 @@ public class Main {
             List<String> result = new ArrayList<>();
 
             long startTime = System.currentTimeMillis();
+            long startMemory = getMemoryUsage();
             switch (mode) {
                 case "1":
                     result = BestFirstSearch.bfs(start, end);
@@ -53,6 +61,7 @@ public class Main {
                     result = AStar.astar(start, end);
                     break;
             }
+            long endMemory = getMemoryUsage();
             long endTime = System.currentTimeMillis();
             long executionTime = endTime - startTime;
 
@@ -60,8 +69,9 @@ public class Main {
             result.removeFirst();
 
             System.out.println("==========================================");
-            System.out.println("Node Visited: " + visitednodes);
-            System.out.println("Execution time: " + executionTime + " ms");
+            System.out.println("Node Visited   : " + visitednodes);
+            System.out.println("Execution time : " + executionTime + " ms");
+            System.out.println("Memory Usage   : " + (endMemory - startMemory) + " bytes");
             System.out.println("==========================================");
 
             for (String item : result) {
