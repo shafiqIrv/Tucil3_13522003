@@ -1,22 +1,8 @@
 # Tucil 3
-> Penyelesaian Permainan Word Ladder Menggunakan Algoritma UCS, Greedy Best First Search, dan A*
-
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
-
+> Solving the Word Ladder Game Using the UCS Algorithm, Greedy Best First Search, and A*
 
 ## General Information
-Word ladder (juga dikenal sebagai Doublets, word-links, change-the-word puzzles, paragrams, laddergrams, atau word golf) adalah salah satu permainan kata yang terkenal bagi seluruh kalangan. Word ladder ditemukan oleh Lewis Carroll, seorang penulis dan matematikawan, pada tahun 1877. Pada permainan ini, pemain diberikan dua kata yang disebut sebagai start word dan end word. Untuk memenangkan permainan, pemain harus menemukan rantai kata yang dapat menghubungkan antara start word dan end word. Banyaknya huruf pada start word dan end word selalu sama. Tiap kata yang berdekatan dalam rantai kata tersebut hanya boleh berbeda satu huruf saja. Pada permainan ini, diharapkan solusi optimal, yaitu solusi yang meminimalkan banyaknya kata yang dimasukkan pada rantai kata. Berikut adalah ilustrasi serta aturan permainan.
+Word ladder (also known as Doublets, word-links, change-the-word puzzles, paragrams, laddergrams, or word golf) is a word game that is well known to all groups. Word ladder was discovered by Lewis Carroll, a writer and mathematician, in 1877. In this game, players are given two words called a start word and an end word. To win the game, players must find a chain of words that can connect the start word and end word. The number of letters at the start word and end word is always the same. Each adjacent word in the word chain can only differ by one letter. In this game, the optimal solution is expected, namely the solution that minimizes the number of words included in the word chain. The following is an illustration and game rules.
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
@@ -26,59 +12,59 @@ Word ladder (juga dikenal sebagai Doublets, word-links, change-the-word puzzles,
 - Openjdk 21.0.2
 - JavaFX 22.0.1
 
-
-
 ## Features
 List the ready features here:
 - Greate GUI
 - Fast Processing
 - Lightweight
-
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
-
+- CLI options
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+First, you need to install vscode with java and code runner extension 
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+### CLI
+- Clone this git repository
+- Open the `Main.java` file in vscode, and run it using vscode, that's it !
+  
+### GUI
+- Clone this git repository
+- Open the root directory in vscode
+- Install and extract javaFX (recommended to put it in `C:\Program Files\Java`) : [Click Here!](https://gluonhq.com/products/javafx/)
+- Copy your javaFX lib path
+<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/75b79c13-71b9-4fe0-b10a-463672234fd7" height="200">
+  
+- Add this code to your run configurations in vscode : `"vmArgs": "--module-path "Your JavaFX lib path" --add-modules javafx.controls,javafx.fxml"`
+<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/5e398a2f-7b56-4e91-9275-58a7f8b5a463" height="200">
 
+- Add the JavaFX lib path to "Referenced Libraries" in vscode
+<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/29aa545d-89be-4808-8cd4-d5570cca3f2b" height="200">
+
+- Open the App.java file in `src/App.java`
+- Click the run button in vscode
+<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/819e27a4-aa97-4695-bc9a-0bc36d532aa9" height="200">
+  
+
+If still confused please watch this video [JavaFX Setup in VSCode](https://www.youtube.com/watch?v=AubJaosfI-0) or contact me 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+### GUI
+<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/23298171-ded9-4d64-b52d-c68ee0b7cebd" width="500">
 
-`write-your-code-here`
-
-
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+### CLI
+<img src="https://github.com/shafiqIrv/Tucil3_13522003/assets/68421940/3c1d7e86-4c33-4883-b0ba-cc9194d3a013" width="500">
 
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
+1. Input start word
+2. Input end word
+3. Input algorithm mode (UCS / GBFS / A\*)
+4. Finished
 
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
 
 
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
+## Members/Author
+13522003	Shafiq Irvansyah
 
 <!-- Optional -->
 <!-- ## License -->
