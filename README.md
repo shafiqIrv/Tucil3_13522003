@@ -47,10 +47,14 @@ Proceed to describe how to install / setup one's local environment / get started
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
 
-`write-your-code-here`
+![Demo Illustration](src/public/demo.png)
+
+1. Input start word
+2. Input end word
+3. Input algorithm (UCS / GBFS / A\*)
+4. Wait for result
+5. Enjoy!
 
 
 ## Project Status
