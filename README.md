@@ -30,9 +30,9 @@ Word ladder (juga dikenal sebagai Doublets, word-links, change-the-word puzzles,
 
 ## Features
 List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Greate GUI
+- Fast Processing
+- Lightweight
 
 
 ## Screenshots
